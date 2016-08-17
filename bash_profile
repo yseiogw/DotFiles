@@ -20,7 +20,7 @@ PAGER=jless;  	export PAGER
 #LANG=ja_JP.eucJP;	export LANG
 LC_CTYPE=ja_JP.eucJP;	export LC_CTYPE
 CVSROOT=/home/cvsmaster;	export CVSROOT
-ZHDEF="/home/ogawa/bin/zen2han.def.news";	export ZHDEF
+ZHDEF="~/bin/zen2han.def.news";	export ZHDEF
 # make mail(1) happy:
 crt=24;		export crt
 

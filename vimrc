@@ -8,6 +8,7 @@ set nowrap
 set pumheight=10
 set showmatch
 set matchtime=1
+set filetype=on
 augroup swapchoice-readonly
   autocmd!
   autocmd SwapExists * let v:swapchoice = 'o'
@@ -23,6 +24,13 @@ map <C-h> :Gtags -f %
 map <C-J> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
+
+map <C-t> :TlistToggle<CR>
+map <C-e> :Explore<CR>
+
+" ctags setting
+"nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+"nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 "-----------------------------------------------------------------------------
 " vimdiff
