@@ -133,7 +133,6 @@ fi
 #alias h='fc -l'
 #alias j=jobs
 #alias m=$PAGER
-alias vi='/usr/local/bin/vim'
 alias c='cd ..'
 alias p=pwd
 alias ls='ls -G'
@@ -145,10 +144,15 @@ alias g='egrep -i'
 alias del='rm -f core* *~ *# ~/.[A-z]*~'
 alias deltex='rm *% *~ *.aux *.log *.toc'
 alias deltexall='rm *% *~ *.aux *.log *.toc *.dvi PS*.ps'
-alias ce='LC_CTYPE=C;export LC_CTYPE'
-alias je='LC_CTYPE=ja_JP.eucJP;export LC_CTYPE'
-alias jo='LC_CTYPE=ja_JP.UTF-8;export LC_CTYPE'
-alias less='jless'
+case `uname` in
+  "FreeBSD")
+	alias ce='LC_CTYPE=C;export LC_CTYPE'
+	alias je='LC_CTYPE=ja_JP.eucJP;export LC_CTYPE'
+	alias jo='LC_CTYPE=ja_JP.UTF-8;export LC_CTYPE'
+	alias less='jless'
+	alias vi='/usr/local/bin/vim'
+	;;
+esac
 alias view='vim -R'
  
 # # be paranoid
