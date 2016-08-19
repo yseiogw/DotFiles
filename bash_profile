@@ -20,7 +20,7 @@ case `uname` in
 	EDITOR=vim;  	export EDITOR
 	PAGER=jless;  	export PAGER
 	#LANG=ja_JP.eucJP;	export LANG
-	LC_CTYPE=ja_JP.eucJP;	export LC_CTYPE
+#	LC_CTYPE=ja_JP.eucJP;	export LC_CTYPE
 	CVSROOT=/home/cvsmaster;	export CVSROOT
 	ZHDEF="~/bin/zen2han.def.news";	export ZHDEF
 	;;
