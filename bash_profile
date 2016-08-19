@@ -14,13 +14,18 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/X11R6/bin:/usr/games:/usr/local/bin:/hom
 # Use cons25l1 for iso-* fonts
 # TERM=cons25; 	export TERM
 
-BLOCKSIZE=K;	export BLOCKSIZE
-EDITOR=vim;  	export EDITOR
-PAGER=jless;  	export PAGER
-#LANG=ja_JP.eucJP;	export LANG
-LC_CTYPE=ja_JP.eucJP;	export LC_CTYPE
-CVSROOT=/home/cvsmaster;	export CVSROOT
-ZHDEF="~/bin/zen2han.def.news";	export ZHDEF
+case `uname` in
+  "FreeBSD")
+	BLOCKSIZE=K;	export BLOCKSIZE
+	EDITOR=vim;  	export EDITOR
+	PAGER=jless;  	export PAGER
+	#LANG=ja_JP.eucJP;	export LANG
+	LC_CTYPE=ja_JP.eucJP;	export LC_CTYPE
+	CVSROOT=/home/cvsmaster;	export CVSROOT
+	ZHDEF="~/bin/zen2han.def.news";	export ZHDEF
+	;;
+esac
+
 # make mail(1) happy:
 crt=24;		export crt
 
