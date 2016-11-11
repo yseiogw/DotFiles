@@ -149,7 +149,7 @@ case `uname` in
 	alias ce='LC_CTYPE=C;export LC_CTYPE'
 	alias je='LC_CTYPE=ja_JP.eucJP;export LC_CTYPE'
 	alias jo='LC_CTYPE=ja_JP.UTF-8;export LC_CTYPE'
-	alias less='jless'
+#	alias less='jless'
 	alias vi='/usr/local/bin/vim'
 	;;
 esac
