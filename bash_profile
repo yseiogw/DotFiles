@@ -18,7 +18,8 @@ case `uname` in
   "FreeBSD")
 	BLOCKSIZE=K;	export BLOCKSIZE
 	EDITOR=vim;  	export EDITOR
-	PAGER=jless;  	export PAGER
+	PAGER=less;  	export PAGER
+	LESS='-g -j10 --ignore-case --RAW-CONTROL-CHARS';	export LESS
 	#LANG=ja_JP.eucJP;	export LANG
 #	LC_CTYPE=ja_JP.eucJP;	export LC_CTYPE
 	CVSROOT=/home/cvsmaster;	export CVSROOT

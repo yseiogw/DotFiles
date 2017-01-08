@@ -151,6 +151,7 @@ case `uname` in
 	alias jo='LC_CTYPE=ja_JP.UTF-8;export LC_CTYPE'
 #	alias less='jless'
 	alias vi='/usr/local/bin/vim'
+	source /usr/local/share/git-core/contrib/completion/git-completion.bash
 	;;
 esac
 alias view='vim -R'
