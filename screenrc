@@ -10,7 +10,7 @@
 #       ベースディストリビューションからインストールするか、
 #       個別にコンパイル・インストールしてください
 
-escape ^[^[
+escape ^]^]
 vbell off
 autodetach on
 
