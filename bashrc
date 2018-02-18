@@ -178,4 +178,5 @@ alias view='vim -R'
 # CDPATH=.:$HOME
 
 export LSCOLORS="cxfxcxdxbxegedabagacad"
+export EDITOR="/usr/bin/vim"
 
