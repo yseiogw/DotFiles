@@ -25,7 +25,7 @@ map <C-J> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
-map <C-t> :TlistToggle<CR>
+map <C-a> :TlistToggle<CR>
 map <C-e> :Explore<CR>
 
 " ctags setting

@@ -131,11 +131,13 @@ fi
 
 # some useful aliases
 #alias h='fc -l'
-#alias j=jobs
+alias j=jobs
+alias u=uptime
 #alias m=$PAGER
-alias c='cd ..'
+alias c='cd ..;pwd;ls'
 alias p=pwd
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
+#alias ls='ls --color=auto'
 alias l='ls -GF'
 alias la='ls -aGF'
 alias ll='ls -lgGF'
@@ -144,6 +146,8 @@ alias g='egrep -i'
 alias del='rm -f core* *~ *# ~/.[A-z]*~'
 alias deltex='rm *% *~ *.aux *.log *.toc'
 alias deltexall='rm *% *~ *.aux *.log *.toc *.dvi PS*.ps'
+alias gist='git status'
+alias gitdiff='git difftool --tool=vimdiff --no-prompt'
 case `uname` in
   "FreeBSD")
 	alias ce='LC_CTYPE=C;export LC_CTYPE'
