@@ -163,6 +163,9 @@ alias deltexall='rm *% *~ *.aux *.log *.toc *.dvi PS*.ps'
 alias gist='git status'
 alias gitdiff='git difftool --tool=vimdiff --no-prompt'
 case `uname` in
+  "Linux")
+	export LSCOLORS="cxfxcxdxbxegedabagacad"
+	;;
   "FreeBSD")
 	alias ce='LC_CTYPE=C;export LC_CTYPE'
 	alias je='LC_CTYPE=ja_JP.eucJP;export LC_CTYPE'
@@ -173,6 +176,14 @@ case `uname` in
 	;;
 esac
 alias view='vim -R'
+
+if [ -f /usr/bin/vim ]; then
+	export EDITOR="/usr/bin/vim"
+elif [ -f /usr/local/bin/vim ]; then
+	export EDITOR="/usr/local/bin/vim"
+else
+	export EDITOR="/usr/bin/vm"
+fi
  
 # # be paranoid
 # alias cp='cp -ip'
@@ -190,6 +201,3 @@ alias view='vim -R'
 
 # search path for cd(1)
 # CDPATH=.:$HOME
-
-export LSCOLORS="cxfxcxdxbxegedabagacad"
-export EDITOR="/usr/bin/vim"
