@@ -27,6 +27,7 @@ map <C-p> :cp<CR>
 
 map <C-a> :TlistToggle<CR>
 map <C-e> :Explore<CR>
+map <C-q> :qa<CR>
 
 " ctags setting
 "nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>

@@ -11,6 +11,11 @@
 # add /usr/games or /usr/X11R6/bin if you want
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/games:/home/private/bin:$HOME/bin; export PATH
 
+if [[ -t 0 ]]; then
+	stty stop undef
+	stty start undef
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -74,7 +79,16 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
+ case `uname` in
+  "FreeBSD")
+#	PS1="`whoami`@`hostname | sed 's/\..*//'`"
+#    PS1='\u@\h:\w\$ '
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
+	;;
+  *)
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
+	;;
+ esac
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
