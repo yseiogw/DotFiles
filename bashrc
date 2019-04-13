@@ -179,5 +179,3 @@ alias view='vim -R'
 
 export LSCOLORS="cxfxcxdxbxegedabagacad"
 export EDITOR="/usr/bin/vim"
-
-source /usr/local/share/git-core/contrib/completion/git-completion.bash
