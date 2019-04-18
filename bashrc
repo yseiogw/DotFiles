@@ -110,7 +110,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+#    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -154,7 +154,6 @@ alias u=uptime
 #alias m=$PAGER
 alias c='cd ..;pwd;ls'
 alias p=pwd
-alias ls='ls -G --color=auto'
 #alias ls='ls --color=auto'
 alias l='ls -GF'
 alias la='ls -aGF'
@@ -168,9 +167,11 @@ alias gist='git status'
 alias gitdiff='git difftool --tool=vimdiff --no-prompt'
 case `uname` in
   "Linux")
+	alias ls='ls -G --color=auto'
 	export LSCOLORS="cxfxcxdxbxegedabagacad"
 	;;
   "FreeBSD")
+	export LSCOLORS="cxfxcxdxbxegedabagacad"
 	alias ce='LC_CTYPE=C;export LC_CTYPE'
 	alias je='LC_CTYPE=ja_JP.eucJP;export LC_CTYPE'
 	alias jo='LC_CTYPE=ja_JP.UTF-8;export LC_CTYPE'
@@ -186,7 +187,7 @@ if [ -f /usr/bin/vim ]; then
 elif [ -f /usr/local/bin/vim ]; then
 	export EDITOR="/usr/local/bin/vim"
 else
-	export EDITOR="/usr/bin/vm"
+	export EDITOR="/usr/bin/vi"
 fi
  
 # # be paranoid
