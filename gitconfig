@@ -3,6 +3,7 @@
 [color]
 	ui = auto
 [alias]
+	b    = branch
 	s    = status
 	l    = log         --oneline -n20 --date=format:'%Y/%m/%d %H:%M' --decorate=short --format=\"%C(yellow)%h%Creset %C(cyan)%ad%Creset %C(green)%an%Creset%C(red)%d%Creset %s\"
 	lg   = log --graph --oneline -n20 --date=format:'%Y/%m/%d %H:%M' --decorate=short --format=\"%C(yellow)%h%Creset %C(cyan)%ad%Creset %C(green)%an%Creset%C(red)%d%Creset %s\"
