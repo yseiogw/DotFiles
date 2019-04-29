@@ -9,10 +9,19 @@ set pumheight=10
 set showmatch
 set matchtime=1
 set filetype=on
+set incsearch
+set ignorecase
+set hlsearch
+
+set laststatus=2
+set statusline=%F%r%h%=
+
 augroup swapchoice-readonly
   autocmd!
   autocmd SwapExists * let v:swapchoice = 'o'
 augroup END
+
+syntax on
 
 " color setting
 set background=dark
@@ -34,6 +43,19 @@ map <C-q> :qa<CR>
 "nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 "-----------------------------------------------------------------------------
+" Black background
+highlight StatusLine ctermfg=black ctermbg=gray
+highlight CursorLine ctermfg=none  ctermbg=darkgray cterm=none
+highlight MatchParen ctermfg=none  ctermbg=darkgray
+"highlight Comment    ctermfg=DarkGreen  ctermbg=NONE
+"highlight Directory  ctermfg=DarkGreen  ctermbg=NONE
+
+" White background
+"highlight Normal     ctermfg=black ctermbg=gray
+"highlight StatusLine ctermfg=gray  ctermbg=black
+"highlight CursorLine ctermfg=darkgray  ctermbg=none cterm=none
+"highlight MatchParen ctermfg=none  ctermbg=darkgray
+
 " vimdiff
 "highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
 "highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
