@@ -153,6 +153,7 @@ alias j=jobs
 alias u=uptime
 #alias m=$PAGER
 alias c='cd ..;pwd;ls -GF'
+alias cdp='cd $OLDPWD'
 alias p=pwd
 #alias ls='ls --color=auto'
 alias l='ls -GF'
