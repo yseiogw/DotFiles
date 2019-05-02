@@ -172,6 +172,8 @@ case `uname` in
   "Linux")
 	alias ls='ls -G --color=auto'
 	export LSCOLORS="cxfxcxdxbxegedabagacad"
+# ファイル名はデフォルト(00)，ディレクトリ名は強調(01)したシアン(36)，シンボリックリンクは強調(01)した青(34)
+#	export LS_COLORS="no=00:fi=00:di=01;36:ln=01;34"
 	;;
   "FreeBSD")
 	export LSCOLORS="cxfxcxdxbxegedabagacad"
