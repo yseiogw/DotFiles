@@ -34,7 +34,7 @@ set laststatus=2
 set statusline=%n\:%y%F\%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r<%l/%L:%p%%>
 
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:.-,trail:-,eol:$,extends:.,precedes:.,nbsp:%
 " 全角スペース・行末のスペース・タブの可視化
 if has("syntax")
 	syntax on
