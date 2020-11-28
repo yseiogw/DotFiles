@@ -181,6 +181,7 @@ alias gist='git status'
 alias gitdiff='git difftool --tool=vimdiff --no-prompt'
 case `uname` in
   "Linux")
+	alias vvv='cd ../hdd/video'
 	alias ls='ls -G --color=auto'
 	export LSCOLORS="cxfxcxdxbxegedabagacad"
 # Filename is default(00), directry name is bold(01) - cyan(36), symbolic link is bold(01) - blue(34).
