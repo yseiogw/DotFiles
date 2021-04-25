@@ -4,7 +4,8 @@ set number
 " https://qiita.com/MATO/items/47737abd776dcc1ce79a
 " 文字コード
 set encoding=utf-8
-set fileencoding=utf-8
+"set fileencoding=utf-8
+set fileencoding=iso-2022-jp,euc-jp,sjis,utf-8
 " viとの互換性をとらない
 set nocompatible
 " 改行コードの自動認識
@@ -74,7 +75,7 @@ augroup swapchoice-readonly
   autocmd SwapExists * let v:swapchoice = 'o'
 augroup END
 
-syntax on
+"syntax on
 
 " color setting
 set background=dark
