@@ -193,8 +193,12 @@ case `uname` in
 	alias je='LC_CTYPE=ja_JP.eucJP;export LC_CTYPE'
 	alias jo='LC_CTYPE=ja_JP.UTF-8;export LC_CTYPE'
 #	alias less='jless'
-	alias vi='/usr/local/bin/vim'
-	source /usr/local/share/git-core/contrib/completion/git-completion.bash
+        if [ -f /usr/local/bin/vim ]; then
+	  alias vi='/usr/local/bin/vim'
+        fi
+	if [ -f /usr/local/share/git-core/contrib/completion/git-completion.bash ]; then
+	  source /usr/local/share/git-core/contrib/completion/git-completion.bash
+	fi
 	;;
 esac
 alias view='vim -R'
